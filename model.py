@@ -18,7 +18,7 @@ from dgl.base import DGLError
 from dgl.utils import expand_as_pair, check_eq_shape, dgl_warning
 
 class GCN(nn.Module):
-    def __init__(self, input_size, hidden_size, layers, residual = 0,):
+    def __init__(self, input_size, hidden_size, layers, residual = 0):
         super(GCN, self).__init__()
         self.gconv = nn.ModuleList([])
         for i in range(layers):
@@ -28,11 +28,14 @@ class GCN(nn.Module):
         # self.output = OutputLayer(hidden_size,his_length + 1 - 2**(control_str.count('T')))
         # self.output = FullyConvLayer(hidden_size)
         
-    def forward(self,graph,x,e_weight):
+    def forward(self,graph,x,e_weight=None):
         # x : [N, F]
         h = x
         for idx, layer in enumerate(self.gconv):
-            h_nxt = layer(graph,h,edge_weight = e_weight)                
+            if(e_weight != None):
+                h_nxt = layer(graph,h,edge_weight = e_weight)                
+            else:
+                h_nxt = layer(graph,h)      
             # [N, F']
             if(h_nxt.shape[-1] == h.shape[-1] and self.residual):
                 h_nxt = h_nxt + h
@@ -58,16 +61,16 @@ class ReplayBuffer:
             state = torch.tensor(state)
         
         if(not isinstance(action,torch.Tensor)):
-            action = torch.tensor(action)
+            action = torch.tensor([action])
             
         if(not isinstance(reward,torch.Tensor)):
-            reward = torch.tensor(reward)
+            reward = torch.tensor([reward])
             
         if(not isinstance(next_state,torch.Tensor)):
             next_state = torch.tensor(next_state)
             
         if(not isinstance(done,torch.Tensor)):
-            done = torch.tensor(done)
+            done = torch.tensor([done])
         
         self.buffer[self.position] = (state, action, reward, next_state, done)
         
@@ -89,6 +92,7 @@ class ReplayBuffer:
             
         # return all torch.tensor
         # [B, its shape]
+        # print(action.shape)
         return state, action, reward, next_state, done
 
     def __len__(self):
@@ -152,7 +156,7 @@ class dqn_model(nn.Module):
         # here problem
         
         feat_2 = torch.cat([d,-sigma],dim = 2)
-        
+        # print('-----------')
         # [B, N, 2] [J, K, 2, K] -> [B, J, K, N, K]
         
         g_1 = torch.einsum('bni,jkid->bjknd',[feat_2, torch.exp(self.mat_params['51'])])
@@ -168,8 +172,8 @@ class dqn_model(nn.Module):
         g_1 = g_1 + self.mat_params['62']
         g_1 = F.relu(g_1)
         
-        
-        g_1.squeeze_(-1)
+        # print('++++++++++++++++')
+        g_1 = g_1.squeeze(-1)
         
         # [B, J, K, N]
         # find the max-min
@@ -178,11 +182,11 @@ class dqn_model(nn.Module):
         # [B,J,N]
         g_1 = torch.max(g_1,dim=1,keepdim=False)[0]
         # [B,N]
-        g_1.unsqueeze_(-1)
+        g_1 = g_1.unsqueeze(-1)
         # [B,N,1]
         # print(g_1.shape, self.mat_params['4'].shape)
         Q_3 = F.linear(g_1, torch.exp(self.mat_params['4']).T)
-        
+        # print('----------------')
         # print("shape Q_1 : {}, Q_2 : {}, Q_3 : {}".format(Q_1.shape,Q_2.shape,Q_3.shape))
         Q = Q_1 + Q_2 + Q_3
         # [N, 1]
@@ -233,7 +237,7 @@ class dqn_agent:
             
             q_values = used_policy(state)
             # q_values [B, N, 1]
-            print('during select action, q_values.shape is {}'.format(q_values.shape))
+            # print('during select action, q_values.shape is {}'.format(q_values.shape))
             
         s = state[0, :, 2*self.g_hidden].unsqueeze(-1)
         # [N]
@@ -289,7 +293,7 @@ class dqn_agent:
 
         state_batch, action_batch, reward_batch, next_state_batch, done_batch = self.memory.sample(
             self.batch_size)
-
+        
         # action_batch , reward_batch, done_batch: [B, 1]
         # state_batch : [B, N, F]
         
@@ -312,8 +316,9 @@ class dqn_agent:
             next_q_policy = self.policy_net(next_state_batch)
             # [B, N, 1]
             next_action = torch.max(next_q_policy, dim=1, keepdim=False)[1]
-            next_action.unsqueeze(1)
+            next_action.unsqueeze_(1)
             # [B, 1, 1]
+            # print('next_q_values shape : {}, next_q_policy shape : {},  next_action shape : {}'.format(next_q_values.shape,next_q_policy.shape, next_action.shape))
             next_q_values = next_q_values.gather(1, next_action).squeeze(1)
             # [B, 1]
         else:
@@ -325,6 +330,8 @@ class dqn_agent:
             
         q_values = self.policy_net(state_batch)
         #[B, N, 1]
+        
+        # action_batch [B, 1]
         action_batch.unsqueeze_(1)
         # action_batch [B, 1, 1]
         q_values = q_values.gather(1, action_batch)
