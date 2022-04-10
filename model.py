@@ -21,9 +21,10 @@ class GCN(nn.Module):
     def __init__(self, input_size, hidden_size, layers, residual = 0):
         super(GCN, self).__init__()
         self.gconv = nn.ModuleList([])
+        
         for i in range(layers):
             self.gconv.append(dnn.GraphConv(in_feats = input_size, out_feats = hidden_size, activation = F.relu))
-
+        
         self.residual = residual
         # self.output = OutputLayer(hidden_size,his_length + 1 - 2**(control_str.count('T')))
         # self.output = FullyConvLayer(hidden_size)
@@ -40,6 +41,7 @@ class GCN(nn.Module):
             if(h_nxt.shape[-1] == h.shape[-1] and self.residual):
                 h_nxt = h_nxt + h
             h = h_nxt
+
         return h
 
 class ReplayBuffer:
@@ -215,7 +217,11 @@ class dqn_agent:
             math.exp(-1. * frame_idx / cfg['epsilon_decay'])
         self.frame_idx = 0
         self.cfg = cfg
-
+        
+        
+        self.graph_opt = None
+        
+        
         self.loss_fn = torch.nn.MSELoss(reduction='mean')
         self.optimizer = torch.optim.Adam(self.policy_net.parameters(),lr = cfg['lr'])
         self.double_dqn = cfg['double_dqn']
@@ -293,7 +299,11 @@ class dqn_agent:
 
         state_batch, action_batch, reward_batch, next_state_batch, done_batch = self.memory.sample(
             self.batch_size)
-        
+        state_batch = state_batch.to(self.cfg['device'])
+        reward_batch = reward_batch.to(self.cfg['device'])
+        action_batch = action_batch.to(self.cfg['device'])
+        next_state_batch = next_state_batch.to(self.cfg['device'])
+        done_batch = done_batch.to(self.cfg['device'])
         # action_batch , reward_batch, done_batch: [B, 1]
         # state_batch : [B, N, F]
         
@@ -343,9 +353,11 @@ class dqn_agent:
         # target.unsqueeze_(1)
         
         loss = self.loss_fn(q_values, target)
+        # self.graph_opt.zero_grad()
         self.optimizer.zero_grad()
-        loss.backward()
+        loss.backward(retain_graph=True)
         self.optimizer.step()
+        # self.graph_opt.step()
 
 
 

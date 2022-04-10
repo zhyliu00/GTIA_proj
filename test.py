@@ -115,34 +115,39 @@ print(b)
 #         train_y = torch.cat([train_y,y],dim = 0)
 # print(train_X.shape, train_y.shape)
 
+a = torch.randn((5,4))
+b = torch.max(a,dim=1)[1]
+print(a)
+print(b)
 
-class MNIST_model(nn.Module):
-    def __init__(self):
-        super(MNIST_model, self).__init__()
-        self.conv = nn.Sequential(
-            nn.Conv2d(1, 16 ,5 , 1, 2),
-            nn.ReLU(),
-            nn.MaxPool2d(2),
-            nn.Conv2d(16, 32, 5, 1, 2),     
-            nn.ReLU(),                      
-            nn.MaxPool2d(2),
-        )
-        self.out = nn.Sequential(
-            nn.Linear(32 * 7 * 7, 128),
-            nn.ReLU(),
-            nn.Linear(128,10)
-        )
+
+# class MNIST_model(nn.Module):
+#     def __init__(self):
+#         super(MNIST_model, self).__init__()
+#         self.conv = nn.Sequential(
+#             nn.Conv2d(1, 16 ,5 , 1, 2),
+#             nn.ReLU(),
+#             nn.MaxPool2d(2),
+#             nn.Conv2d(16, 32, 5, 1, 2),     
+#             nn.ReLU(),                      
+#             nn.MaxPool2d(2),
+#         )
+#         self.out = nn.Sequential(
+#             nn.Linear(32 * 7 * 7, 128),
+#             nn.ReLU(),
+#             nn.Linear(128,10)
+#         )
         
-    def forward(self,x):
-        h = self.conv(x)
-        h = h.view(h.shape[0], -1)
-        h = self.out(h)
-        # h = F.LogSoftmax(h,dim=1)
-        return h
+#     def forward(self,x):
+#         h = self.conv(x)
+#         h = h.view(h.shape[0], -1)
+#         h = self.out(h)
+#         # h = F.LogSoftmax(h,dim=1)
+#         return h
     
-model = MNIST_model()
-for param in model.parameters():
-    print(param.shape)
+# model = MNIST_model()
+# for param in model.parameters():
+#     print(param.shape)
 # model1 = MNIST_model()
 # model2 = MNIST_model()
 # loss_fn = nn.CrossEntropyLoss()   

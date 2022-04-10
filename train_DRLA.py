@@ -40,12 +40,12 @@ parser.add_argument('--layers',type=int,default=2)
 args = parser.parse_args()
 
 config = {
-    # 'device': torch.device("cuda:{}".format(args.gpu_id) if torch.cuda.is_available() else "cpu"),
-    'device' : torch.device('cpu'),
+    'device': torch.device("cuda:{}".format(args.gpu_id) if torch.cuda.is_available() else "cpu"),
+    # 'device' : torch.device('cpu'),
     'batch' : args.batch_size,
     'lr' : args.lr,
     'max_epohs' : args.epochs,
-    'save_every' :10,     
+    
     'double_dqn' : True,
     'max_episodes' : 2000,
     'argument':vars(args),
@@ -68,7 +68,8 @@ config = {
     'delta_g' : 10,
     'delta_l' : 5,
     'total_worker': args.N,
-    'total_episode': 10000,
+    'total_episode': 50000,
+    'test_every' :10
     
 }
 if(args.test_folder != None):
@@ -76,26 +77,51 @@ if(args.test_folder != None):
 config['result_path']= os.path.join(curr_path , "outputs/DRLA/" + curr_time + '/results/')  # path to save results
 config['model_path']= os.path.join( curr_path ,"outputs/DRLA/" + curr_time + '/models/')  # path to save models
 
+
+
 def check_path(path):
     if(not os.path.exists(path)):
         os.makedirs(path)
 
+def test_DRLA(agent,env):
+    test_env = DRLA_env(config)
+    with torch.no_grad():
+        state = test_env.reset()
+        test_env.Model.load_state_dict(env.Model.state_dict())
+        done = False
+        while(not done):
+            action = agent.select_action(state)
+            next_state, reward, done, _ = env.step(action)
+            # print(reward)
+            state = next_state
+            if(done):
+                welfare, workerList, acc = env.finalize('test')
+                print('------------\nin test')
+                print('finish. welfare : {}. workerList : {}\n------------'.format(welfare, workerList))
+    return welfare, workerList
 def train_DRLA():
     
     env = DRLA_env(config)
 
     N = config['N']
     agent = dqn_agent(N,config)
+    agent.graph_opt = env.opt
     check_path(config['result_path'])
     check_path(config['model_path'])
-    
+    config_save = copy.deepcopy(config)
+    config_save['device'] = 'cpu'
+    json.dump(config_save, open(config['result_path'] + 'cfg.json','w'),indent=2)
     #######
     # 问题：sigma g选大了，welfare都是负数
     rewards = []
     welfares = []
+    test_welfares = []
     best_welfare = -100
     result = {
-        'ep_rwd': []
+        'ep_rwd': [],
+        'acc': [],
+        'test_rwd': []
+        
     }
     for epoch in range(config['total_episode']):
         state = env.reset()
@@ -112,21 +138,31 @@ def train_DRLA():
             agent.update()
             ep_reward += reward
             if(done):
-                welfare, workerList = env.finalize()
+                welfare, workerList, acc = env.finalize('train')
                 
                 if(welfare > best_welfare):
                     best_welfare = welfare
-                    dqn_agent.save(config['model_path'])
-                
+                    
+                    ####
+                    # save 2 model
+                    agent.save(config['model_path']) 
+                    torch.save(env.Model.state_dict(),config['model_path'] + 'GCN_model.pth')
+                    
+                if((epoch + 1) % config['test_every'] == 0):
+                    test_welfare , _ = test_DRLA(agent,env)
+                    test_welfares.append(test_welfare)
+                    result['test_rwd'].append(float(test_welfare.detach().cpu().numpy()))
+                    result['acc'].append(float(acc.detach().cpu().numpy()))
             cur_reward.append(reward)
             
         print(cur_reward)
-        print('finish. welfare : {}. workerList : {}\n------------'.format(welfare, workerList))
+        print('finish. welfare : {}, acc : {}, workerList : {}\n------------'.format(welfare,acc, workerList))
         rewards.append(ep_reward)
         welfares.append(welfare)
         result['ep_rwd'].append(float(welfare.detach().cpu().numpy()))
+        
     # print('rewards : {}'.format(rewards))
-        json.dump(result, open('./result.json','w'), indent=2)
+        json.dump(result, open('{}result.json'.format(config['result_path']),'w'), indent=2)
     print('welfares : {}'.format(welfares))
     
 

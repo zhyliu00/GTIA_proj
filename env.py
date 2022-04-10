@@ -1,3 +1,4 @@
+from ast import Global
 import copy
 import numpy as np
 from model import  GCN,dqn_agent
@@ -8,6 +9,7 @@ import torchvision
 import torchvision.transforms as transforms
 import torch.nn.functional as F
 import random 
+from torch.utils.data import DataLoader
 class MNIST_model(nn.Module):
     def __init__(self):
         super(MNIST_model, self).__init__()
@@ -123,15 +125,18 @@ class DRLA_env:
         self.R = 30 * 1e3
         self.B = 20 * 1e6
         
-        MNIST_data = Get_MNIST()
-
+        self.MNIST_data = Get_MNIST()
+        train, test = self.MNIST_data
+        self.test_dataloader = DataLoader(test, batch_size=4096, shuffle=True)
+        
+        
         N = cfg['N']
         
         ####
         # Initial workers
         self.workers = []
         for i in range(N):
-            self.workers.append(worker(MNIST_data))
+            self.workers.append(worker(self.MNIST_data))
 
         u = []
         v = []
@@ -150,27 +155,24 @@ class DRLA_env:
         u = torch.tensor(u)
         v = torch.tensor(v)
         edges = u,v
-        g = dgl.graph(edges) 
+        self.g = dgl.graph(edges) 
         print('Graph constructed')
-        print(g)
+        print(self.g)
         
-        v = torch.ones((N,cfg['g_hidden']))
+        
         # here self loop weight is 0
-        g = dgl.add_self_loop(g)
+        self.g = dgl.add_self_loop(self.g)
         features = torch.ones((N,cfg['g_hidden']))
         
         
-        g.ndata['f'] = features
-        Models = {
-            'GCN':GCN(input_size = cfg['g_hidden'],hidden_size = cfg['g_hidden'],layers = cfg['layers']),
-            'DQN':dqn_agent(cfg['N'], cfg)
-        }
-        
+        self.g.ndata['f'] = features
+        self.Model  = GCN(input_size = cfg['g_hidden'],hidden_size = cfg['g_hidden'],layers = cfg['layers'])
+        self.opt = torch.optim.Adam(self.Model.parameters(), lr = cfg['lr'])
         ####
         # Conv
-        v_hat = Models['GCN'](g,g.ndata['f']).detach()
+        v_hat = self.Model(self.g,self.g.ndata['f'])
         # v_hat : [N, w]
-        v_G = torch.sum(v_hat,dim = 0,keepdim=False).detach()
+        v_G = torch.sum(v_hat,dim = 0,keepdim=False)
         v_G = v_G.repeat(N,1)
         print("v_G.shape : {}".format(v_G.shape))
         
@@ -191,8 +193,9 @@ class DRLA_env:
             else:
                 init_features = torch.cat([init_features,self.workers[i].state_feature],dim = 0)
         print('init_features shpe : {}'.format(init_features.shape))
+        self.init_features = init_features
         
-        init_states = torch.cat([v_hat,v_G,s,init_features],dim = 1)
+        init_states = torch.cat([v_hat,v_G,s,self.init_features],dim = 1)
         print('init_states shpe : {}'.format(init_states.shape))
         
         self.states = init_states
@@ -204,14 +207,33 @@ class DRLA_env:
         self.alpha_hat = 5e-2
         self.beta_hat = 5e-5
 
-    def finalize(self):
+    def test_MNIST(self):
+        loader = self.test_dataloader
+        model = self.Global_model
+        with torch.no_grad():
+            res = 0
+            sm = 0
+            for idx, (X,y) in enumerate(loader):
+                pred_logits = model(X)
+                pred_number = torch.max(pred_logits,dim=1)[1]
+                
+                res += torch.sum(pred_number == y).float()
+                sm += len(X)
+            res = res / sm
+            print('this episode, accuracy is {}'.format(res))
+        return res
+            
+
+    def finalize(self,phase):
         s = self.states[:,2 * self.g_hidden]
+        if(phase == 'test'):
+            return self.S(s), torch.nonzero(s), 0.0
         models = []
         for idx, val in enumerate(s):
             if(val):
                 models.append(self.workers[idx].train())
         if(len(models)==0):
-            return self.S(s), torch.nonzero(s)
+            return self.S(s), torch.nonzero(s), self.test_MNIST()
         global_model =  self.Global_model
         
         temp_params = {}
@@ -230,7 +252,9 @@ class DRLA_env:
         for i in range(self.N):
             self.workers[i].model.load_state_dict(self.Global_model.state_dict())
         
-        return self.S(s), torch.nonzero(s)
+        acc = self.test_MNIST()
+        # print('returned : {}'.format((self.S(s), torch.nonzero(s), acc)))
+        return self.S(s), torch.nonzero(s), acc
         
     def S(self,state):
         selected_worker = []
@@ -277,9 +301,23 @@ class DRLA_env:
         return reward
         
     def reset(self):
-        self.states[:,2 * self.g_hidden] *= 0
+        v_hat = self.Model(self.g,self.g.ndata['f'])
+        # v_hat : [N, w]
+        v_G = torch.sum(v_hat,dim = 0,keepdim=False)
+        v_G = v_G.repeat(self.N,1)
+        # print("v_G.shape : {}".format(v_G.shape))
+        
+        
+        s = torch.zeros((self.N,1))
+        for i in range(self.N):
+            self.workers[i].v = v_hat[i].detach()
+            self.workers[i].v_G = v_G[i].detach()
+            
+        
+        init_states = torch.cat([v_hat.detach(),v_G.detach(),s,self.init_features],dim = 1)
+        print('init_states shpe : {}'.format(init_states.shape))
+        self.states = init_states.to(self.cfg['device'])
         self.stp = 0
-        # print(torch.sum(s>0))
         return self.states
 
     def calc_reward(self,s,a):
