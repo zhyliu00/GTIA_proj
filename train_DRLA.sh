@@ -1,7 +1,16 @@
-Ns=(10 50 110)
+# lab1
+Ns=(10)
+# Ns=(10 70)
 gpu_id=0
-# Ns=(30 70 90)
+# Ns=(110)
 # gpu_id=1
+
+# lab2
+# Ns=(30 50)
+# gpu_id=0
+# Ns=(90)
+# gpu_id=1
+
 for N in ${Ns[*]}
 do
     echo "now train ${train_policy}"

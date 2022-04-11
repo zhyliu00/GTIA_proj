@@ -21,6 +21,8 @@ The Root is described as below
 
 ```
 ROOT
++-- MNIST
+|   +-- ...
 +-- outputs
 |   +-- 20220411-024816
 |   +-- 20220411-064519
@@ -36,6 +38,7 @@ ROOT
 +-- plot.py
 ```
 
+- `MNIST` the MNIST dataset.
 - `outputs` contains the training log and model file. Each time run `train_DRLA.py` to launch a new training process, it will automatically create a folder to store the training log and model file.
 - `result` is for plot. After training, it is required to manually move the move the `result.json` file in each training folder here to plot the result.
 - `train_DRLA.py` train python script.
