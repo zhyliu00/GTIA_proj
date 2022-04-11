@@ -29,7 +29,7 @@ parser.add_argument('--batch_size',type=int,default=128)
 parser.add_argument('--gpu_id', type=int,default=0)
 parser.add_argument('--epochs', type=int,default=50)
 parser.add_argument('--hidden', type=int,default=128)
-parser.add_argument('--lr',type=float,default=1e-3)
+parser.add_argument('--lr',type=float,default=5e-4)
 parser.add_argument('--test_folder', type = str, default = None)
 parser.add_argument('--phase', type = str,default='test')
 parser.add_argument('--g_hidden',type=int,default=64)
@@ -37,6 +37,9 @@ parser.add_argument('--J',type=int,default=8)
 parser.add_argument('--K',type=int,default=8)
 parser.add_argument('--N',type=int,default=100)
 parser.add_argument('--layers',type=int,default=2)
+parser.add_argument('--delta_g',type=int,default=10)
+parser.add_argument('--delta_l',type=int,default=5)
+parser.add_argument('--total_episode',type=int,default=50000)
 args = parser.parse_args()
 
 config = {
@@ -47,15 +50,12 @@ config = {
     'max_epohs' : args.epochs,
     
     'double_dqn' : True,
-    'max_episodes' : 2000,
     'argument':vars(args),
-    'eval_eps' : 30, # number of episodes for evaluating
-    'max_steps' : 200,
     'target_update' : 4,
     'algo' : "DQN",  # name of algo
     'gamma' : 0.90,
-    'epsilon_start' : 0.90,  # start epsilon of e-greedy policy
-    'epsilon_end' : 0.05,
+    'epsilon_start' : 0.93,  # start epsilon of e-greedy policy
+    'epsilon_end' : 0.07,
     'epsilon_decay' : 3000,
     'memory_capacity' : 10000 , # capacity of Replay Memory
     'batch_size' : args.batch_size,
@@ -65,10 +65,10 @@ config = {
     'K': args.K,
     'N': args.N,
     'layers': args.layers,
-    'delta_g' : 10,
-    'delta_l' : 5,
+    'delta_g' : args.delta_g,
+    'delta_l' : args.delta_l,
     'total_worker': args.N,
-    'total_episode': 50000,
+    'total_episode': args.total_episode,
     'test_every' :10
     
 }
@@ -171,20 +171,3 @@ if __name__ == "__main__":
     ## Data input
     train_DRLA()
     
-    # # args.test_folder != None means test mode
-    # if(args.phase == 'test'):
-    #     for k , model in Models.items():
-    #         state = torch.load(config['model_path'] + '{}.pth'.format(k),map_location=config['device'])
-    #         model.load_state_dict(state)
-    
-    # # not a end to end task
-    
-    # if(args.phase == 'train'):
-    #     loss_arr = train_vlocal(Models,env)
-    
-    # test_vlocal(Models,env)
-    
-    # if(args.phase == 'train'):
-    #     with open('./cur_train_folder','w') as f:
-    #         f.write(curr_time)
-        

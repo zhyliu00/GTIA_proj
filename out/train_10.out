@@ -1,0 +1,1375 @@
+Using backend: pytorch
+Graph constructed
+Graph(num_nodes=10, num_edges=62,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+/LZY/GTIA_Project/model.py:241: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  state = torch.tensor(state, device=self.cfg['device'], dtype=torch.float32).unsqueeze(0)
+this episode, accuracy is 0.0982000008225441
+Model Saved!
+[tensor([0.8389]), tensor([3.3937]), tensor([8.7034]), tensor([1.4672]), tensor([2.6999]), tensor([-0.0216])]
+finish. welfare : tensor([37.1031]), acc : 0.0982000008225441, workerList : tensor([[0],
+        [2],
+        [3],
+        [6],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.10279999673366547
+[tensor([16.3634]), tensor([-4.8399])]
+finish. welfare : tensor([36.3634]), acc : 0.10279999673366547, workerList : tensor([[8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.0957999974489212
+[tensor([1.7552]), tensor([12.8948]), tensor([-1.7140])]
+finish. welfare : tensor([34.6500]), acc : 0.0957999974489212, workerList : tensor([[2],
+        [6]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.09740000218153
+Model Saved!
+[tensor([16.3634]), tensor([2.1906]), tensor([-2.3023])]
+finish. welfare : tensor([38.5540]), acc : 0.09740000218153, workerList : tensor([[5],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.10279999673366547
+Model Saved!
+[tensor([3.2686]), tensor([8.5935]), tensor([6.4861]), tensor([2.1776]), tensor([0.0773]), tensor([-1.4777])]
+finish. welfare : tensor([40.6031]), acc : 0.10279999673366547, workerList : tensor([[0],
+        [1],
+        [2],
+        [3],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.10279999673366547
+[tensor([16.3432]), tensor([-4.2559])]
+finish. welfare : tensor([36.3432]), acc : 0.10279999673366547, workerList : tensor([[3]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.1784999966621399
+Model Saved!
+[tensor([16.4929]), tensor([2.6206]), tensor([4.1462]), tensor([0.9456]), tensor([-2.0987])]
+finish. welfare : tensor([44.2053]), acc : 0.1784999966621399, workerList : tensor([[2],
+        [3],
+        [4],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.10279999673366547
+[tensor([3.2686]), tensor([0.9679]), tensor([2.0732]), tensor([4.9196]), tensor([3.2300]), tensor([-0.1594])]
+finish. welfare : tensor([34.4594]), acc : 0.10279999673366547, workerList : tensor([[1],
+        [3],
+        [6],
+        [7],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.09799999743700027
+[tensor([0.8389]), tensor([4.4284]), tensor([6.0133]), tensor([3.6723]), tensor([-0.2220])]
+finish. welfare : tensor([34.9530]), acc : 0.09799999743700027, workerList : tensor([[1],
+        [3],
+        [5],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.2502000033855438
+Graph constructed
+Graph(num_nodes=10, num_edges=86,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([41.9356]). workerList : tensor([[0],
+        [1],
+        [2],
+        [3],
+        [4],
+        [5],
+        [6],
+        [8],
+        [9]], device='cuda:0')
+------------
+[tensor([3.2686]), tensor([2.4553]), tensor([1.3333]), tensor([4.5114]), tensor([3.3168]), tensor([1.0711]), tensor([2.1409]), tensor([1.6146]), tensor([2.2236]), tensor([-0.8478])]
+finish. welfare : tensor([41.9356]), acc : 0.2502000033855438, workerList : tensor([[0],
+        [1],
+        [2],
+        [3],
+        [4],
+        [5],
+        [6],
+        [8],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.2502000033855438
+[tensor([-1.6314])]
+finish. welfare : 20, acc : 0.2502000033855438, workerList : tensor([], device='cuda:0', size=(0, 1), dtype=torch.int64)
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.0982000008225441
+[tensor([16.3634]), tensor([5.9304]), tensor([-4.4260])]
+finish. welfare : tensor([42.2937]), acc : 0.0982000008225441, workerList : tensor([[2],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.0982000008225441
+[tensor([-1.6314])]
+finish. welfare : 20, acc : 0.0982000008225441, workerList : tensor([], device='cuda:0', size=(0, 1), dtype=torch.int64)
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.10279999673366547
+[tensor([16.4929]), tensor([2.1203]), tensor([-3.7937])]
+finish. welfare : tensor([38.6132]), acc : 0.10279999673366547, workerList : tensor([[4],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.11550000309944153
+[tensor([8.4457]), tensor([6.6862]), tensor([-2.8125])]
+finish. welfare : tensor([35.1319]), acc : 0.11550000309944153, workerList : tensor([[0],
+        [4]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.1145000010728836
+[tensor([22.9027]), tensor([-8.2527])]
+finish. welfare : tensor([42.9027]), acc : 0.1145000010728836, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.13359999656677246
+[tensor([1.7552]), tensor([12.8948]), tensor([3.4837]), tensor([2.0873]), tensor([0.1174]), tensor([1.5652]), tensor([-0.5741])]
+finish. welfare : tensor([41.9035]), acc : 0.13359999656677246, workerList : tensor([[0],
+        [2],
+        [3],
+        [5],
+        [6],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.11500000208616257
+[tensor([22.9027]), tensor([-7.5677])]
+finish. welfare : tensor([42.9027]), acc : 0.11500000208616257, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.19599999487400055
+[tensor([1.7552]), tensor([1.2563]), tensor([6.8427]), tensor([0.2863]), tensor([4.9582]), tensor([1.0094]), tensor([2.1246]), tensor([1.7296]), tensor([-0.1119])]
+finish. welfare : tensor([39.9624]), acc : 0.19599999487400055, workerList : tensor([[0],
+        [2],
+        [4],
+        [5],
+        [6],
+        [7],
+        [8],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.2720000147819519
+Graph constructed
+Graph(num_nodes=10, num_edges=82,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([39.4256]). workerList : tensor([[0],
+        [2],
+        [4],
+        [6],
+        [8],
+        [9]], device='cuda:0')
+------------
+[tensor([0.8389]), tensor([3.3937]), tensor([6.6098]), tensor([4.0196]), tensor([4.1060]), tensor([0.4577]), tensor([-0.2229])]
+finish. welfare : tensor([39.4256]), acc : 0.2720000147819519, workerList : tensor([[0],
+        [2],
+        [4],
+        [6],
+        [8],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.2874000072479248
+[tensor([8.4457]), tensor([9.9177]), tensor([2.1836]), tensor([-2.8759])]
+finish. welfare : tensor([40.5469]), acc : 0.2874000072479248, workerList : tensor([[0],
+        [2],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.26440000534057617
+[tensor([0.8389]), tensor([10.3294]), tensor([-0.2938])]
+finish. welfare : tensor([31.1683]), acc : 0.26440000534057617, workerList : tensor([[4],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.37139999866485596
+[tensor([16.3432]), tensor([-5.4929])]
+finish. welfare : tensor([36.3432]), acc : 0.37139999866485596, workerList : tensor([[3]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.3474000096321106
+[tensor([1.7552]), tensor([9.7683]), tensor([4.2870]), tensor([-1.1576])]
+finish. welfare : tensor([35.8105]), acc : 0.3474000096321106, workerList : tensor([[3],
+        [6],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.3734999895095825
+[tensor([3.2686]), tensor([12.0663]), tensor([3.3232]), tensor([-2.1941])]
+finish. welfare : tensor([38.6582]), acc : 0.3734999895095825, workerList : tensor([[1],
+        [2],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.40380001068115234
+[tensor([22.9027]), tensor([-1.1176])]
+finish. welfare : tensor([42.9027]), acc : 0.40380001068115234, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.4253000020980835
+[tensor([1.7552]), tensor([5.8943]), tensor([5.3704]), tensor([5.1513]), tensor([2.0319]), tensor([1.7005]), tensor([-1.0429])]
+finish. welfare : tensor([41.9035]), acc : 0.4253000020980835, workerList : tensor([[0],
+        [2],
+        [3],
+        [5],
+        [6],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.4253000020980835
+[tensor([-1.6314])]
+finish. welfare : 20, acc : 0.4253000020980835, workerList : tensor([], device='cuda:0', size=(0, 1), dtype=torch.int64)
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.4595000147819519
+[tensor([16.3634]), tensor([5.9304]), tensor([-3.6356])]
+finish. welfare : tensor([42.2937]), acc : 0.4595000147819519, workerList : tensor([[2],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.41040000319480896
+Graph constructed
+Graph(num_nodes=10, num_edges=76,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([42.9027]). workerList : tensor([[2]], device='cuda:0')
+------------
+[tensor([22.9027]), tensor([-8.6087])]
+finish. welfare : tensor([42.9027]), acc : 0.41040000319480896, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.41359999775886536
+[tensor([15.2915]), tensor([6.4936]), tensor([1.1474]), tensor([-2.2504])]
+finish. welfare : tensor([42.9324]), acc : 0.41359999775886536, workerList : tensor([[2],
+        [4],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.48539999127388
+[tensor([0.8389]), tensor([6.2986]), tensor([5.5564]), tensor([5.2431]), tensor([2.0671]), tensor([1.7289]), tensor([-0.5525])]
+finish. welfare : tensor([41.7331]), acc : 0.48539999127388, workerList : tensor([[0],
+        [2],
+        [3],
+        [5],
+        [8],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.48539999127388
+[tensor([-1.6314])]
+finish. welfare : 20, acc : 0.48539999127388, workerList : tensor([], device='cuda:0', size=(0, 1), dtype=torch.int64)
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.3589000105857849
+[tensor([15.2915]), tensor([-0.7017])]
+finish. welfare : tensor([35.2915]), acc : 0.3589000105857849, workerList : tensor([[5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.4514000117778778
+[tensor([22.9027]), tensor([-1.1176])]
+finish. welfare : tensor([42.9027]), acc : 0.4514000117778778, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.4291999936103821
+[tensor([16.3634]), tensor([-5.2479])]
+finish. welfare : tensor([36.3634]), acc : 0.4291999936103821, workerList : tensor([[8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.42800000309944153
+[tensor([22.9027]), tensor([-7.5677])]
+finish. welfare : tensor([42.9027]), acc : 0.42800000309944153, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.47600001096725464
+[tensor([3.2686]), tensor([8.8187]), tensor([3.9995]), tensor([2.8398]), tensor([-0.9988])]
+finish. welfare : tensor([38.9266]), acc : 0.47600001096725464, workerList : tensor([[1],
+        [3],
+        [4],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.47600001096725464
+[tensor([-1.6314])]
+finish. welfare : 20, acc : 0.47600001096725464, workerList : tensor([], device='cuda:0', size=(0, 1), dtype=torch.int64)
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.4936000108718872
+Graph constructed
+Graph(num_nodes=10, num_edges=78,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([38.3634]). workerList : tensor([[0],
+        [2]], device='cuda:0')
+------------
+[tensor([8.4457]), tensor([9.9177]), tensor([-2.3161])]
+finish. welfare : tensor([38.3634]), acc : 0.4936000108718872, workerList : tensor([[0],
+        [2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5722000002861023
+[tensor([15.2915]), tensor([3.2625]), tensor([-0.5234])]
+finish. welfare : tensor([38.5540]), acc : 0.5722000002861023, workerList : tensor([[5],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.4837999939918518
+[tensor([22.9027]), tensor([-0.5483])]
+finish. welfare : tensor([42.9027]), acc : 0.4837999939918518, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.541100025177002
+[tensor([16.3634]), tensor([-5.2479])]
+finish. welfare : tensor([36.3634]), acc : 0.541100025177002, workerList : tensor([[8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5135999917984009
+[tensor([16.4929]), tensor([5.8614]), tensor([-1.7692])]
+finish. welfare : tensor([42.3544]), acc : 0.5135999917984009, workerList : tensor([[2],
+        [4]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5135999917984009
+[tensor([-1.6314])]
+finish. welfare : 20, acc : 0.5135999917984009, workerList : tensor([], device='cuda:0', size=(0, 1), dtype=torch.int64)
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5827999711036682
+[tensor([3.2686]), tensor([9.0274]), tensor([1.6439]), tensor([4.9269]), tensor([1.9239]), tensor([1.4592]), tensor([-0.9204])]
+finish. welfare : tensor([42.2499]), acc : 0.5827999711036682, workerList : tensor([[0],
+        [1],
+        [2],
+        [3],
+        [5],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5270000100135803
+[tensor([3.2686]), tensor([12.0663]), tensor([-1.7901])]
+finish. welfare : tensor([35.3350]), acc : 0.5270000100135803, workerList : tensor([[1],
+        [2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5550000071525574
+[tensor([1.7552]), tensor([2.4774]), tensor([2.8246]), tensor([2.7294]), tensor([3.6211]), tensor([2.7138]), tensor([1.9760]), tensor([1.6146]), tensor([-0.7505])]
+finish. welfare : tensor([39.7120]), acc : 0.5550000071525574, workerList : tensor([[0],
+        [1],
+        [3],
+        [4],
+        [5],
+        [6],
+        [8],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5569999814033508
+[tensor([0.8389]), tensor([13.4551]), tensor([3.2616]), tensor([0.3814]), tensor([-1.5208])]
+finish. welfare : tensor([37.9370]), acc : 0.5569999814033508, workerList : tensor([[0],
+        [2],
+        [5],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5774999856948853
+Graph constructed
+Graph(num_nodes=10, num_edges=80,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([35.0741]). workerList : tensor([[0],
+        [8]], device='cuda:0')
+------------
+[tensor([8.4457]), tensor([6.6284]), tensor([-1.1341])]
+finish. welfare : tensor([35.0741]), acc : 0.5774999856948853, workerList : tensor([[0],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6146000027656555
+[tensor([1.7552]), tensor([9.5240]), tensor([-0.6862])]
+finish. welfare : tensor([31.2792]), acc : 0.6146000027656555, workerList : tensor([[3],
+        [6]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5716000199317932
+[tensor([3.2686]), tensor([9.0792]), tensor([4.0775]), tensor([-1.7430])]
+finish. welfare : tensor([36.4254]), acc : 0.5716000199317932, workerList : tensor([[1],
+        [3],
+        [4]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6011000275611877
+[tensor([1.7552]), tensor([3.9687]), tensor([5.8095]), tensor([5.4037]), tensor([0.7607]), tensor([1.9620]), tensor([1.6698]), tensor([-0.7617])]
+finish. welfare : tensor([41.3295]), acc : 0.6011000275611877, workerList : tensor([[0],
+        [1],
+        [2],
+        [3],
+        [5],
+        [6],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5889000296592712
+[tensor([16.3634]), tensor([-4.0674])]
+finish. welfare : tensor([36.3634]), acc : 0.5889000296592712, workerList : tensor([[8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5454999804496765
+[tensor([15.2915]), tensor([3.2625]), tensor([-0.5234])]
+finish. welfare : tensor([38.5540]), acc : 0.5454999804496765, workerList : tensor([[5],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6204000115394592
+[tensor([15.2915]), tensor([6.4936]), tensor([-4.7976])]
+finish. welfare : tensor([41.7851]), acc : 0.6204000115394592, workerList : tensor([[2],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5357000231742859
+[tensor([22.9027]), tensor([-7.5677])]
+finish. welfare : tensor([42.9027]), acc : 0.5357000231742859, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5177000164985657
+[tensor([1.7552]), tensor([12.8948]), tensor([-2.3657])]
+finish. welfare : tensor([34.6500]), acc : 0.5177000164985657, workerList : tensor([[2],
+        [6]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5
+[tensor([22.9027]), tensor([-1.1176])]
+finish. welfare : tensor([42.9027]), acc : 0.5, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5016000270843506
+Graph constructed
+Graph(num_nodes=10, num_edges=76,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([42.9027]). workerList : tensor([[2]], device='cuda:0')
+------------
+[tensor([22.9027]), tensor([-4.5393])]
+finish. welfare : tensor([42.9027]), acc : 0.5016000270843506, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5090000033378601
+[tensor([22.9027]), tensor([-0.6969])]
+finish. welfare : tensor([42.9027]), acc : 0.5090000033378601, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5333999991416931
+[tensor([15.2915]), tensor([-3.4293])]
+finish. welfare : tensor([35.2915]), acc : 0.5333999991416931, workerList : tensor([[5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5403000116348267
+[tensor([15.2915]), tensor([6.4936]), tensor([-3.9628])]
+finish. welfare : tensor([41.7851]), acc : 0.5403000116348267, workerList : tensor([[2],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5403000116348267
+[tensor([-1.6314])]
+finish. welfare : 20, acc : 0.5403000116348267, workerList : tensor([], device='cuda:0', size=(0, 1), dtype=torch.int64)
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5809000134468079
+[tensor([0.8389]), tensor([4.4284]), tensor([6.2669]), tensor([3.6132]), tensor([-0.2422])]
+finish. welfare : tensor([35.1475]), acc : 0.5809000134468079, workerList : tensor([[1],
+        [4],
+        [5],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6065999865531921
+[tensor([16.3432]), tensor([2.5836]), tensor([4.1776]), tensor([-2.3436])]
+finish. welfare : tensor([43.1044]), acc : 0.6065999865531921, workerList : tensor([[2],
+        [3],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5867000222206116
+[tensor([0.8389]), tensor([10.2766]), tensor([6.7523]), tensor([-1.4077])]
+finish. welfare : tensor([37.8678]), acc : 0.5867000222206116, workerList : tensor([[2],
+        [8],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6050999760627747
+[tensor([1.7552]), tensor([3.9687]), tensor([8.1028]), tensor([1.3355]), tensor([2.5355]), tensor([2.1010]), tensor([-1.0495])]
+finish. welfare : tensor([39.7987]), acc : 0.6050999760627747, workerList : tensor([[0],
+        [1],
+        [2],
+        [4],
+        [5],
+        [6]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6050999760627747
+[tensor([-1.6314])]
+finish. welfare : 20, acc : 0.6050999760627747, workerList : tensor([], device='cuda:0', size=(0, 1), dtype=torch.int64)
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.652899980545044
+Graph constructed
+Graph(num_nodes=10, num_edges=80,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([38.6132]). workerList : tensor([[4],
+        [5]], device='cuda:0')
+------------
+[tensor([15.2915]), tensor([-4.6175])]
+finish. welfare : tensor([35.2915]), acc : 0.652899980545044, workerList : tensor([[5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6323999762535095
+[tensor([22.9027]), tensor([-7.5677])]
+finish. welfare : tensor([42.9027]), acc : 0.6323999762535095, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6381000280380249
+[tensor([16.3634]), tensor([5.9304]), tensor([0.6002]), tensor([-0.8902])]
+finish. welfare : tensor([42.8939]), acc : 0.6381000280380249, workerList : tensor([[2],
+        [5],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6154000163078308
+[tensor([22.9027]), tensor([-1.1176])]
+finish. welfare : tensor([42.9027]), acc : 0.6154000163078308, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6292999982833862
+[tensor([3.2686]), tensor([8.8187]), tensor([-0.4907])]
+finish. welfare : tensor([32.0873]), acc : 0.6292999982833862, workerList : tensor([[1],
+        [3]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6292999982833862
+[tensor([-1.6314])]
+finish. welfare : 20, acc : 0.6292999982833862, workerList : tensor([], device='cuda:0', size=(0, 1), dtype=torch.int64)
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5950999855995178
+[tensor([22.9027]), tensor([-8.6087])]
+finish. welfare : tensor([42.9027]), acc : 0.5950999855995178, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6176000237464905
+[tensor([3.2686]), tensor([9.0274]), tensor([6.3622]), tensor([1.9966]), tensor([1.6186]), tensor([-1.1933])]
+finish. welfare : tensor([42.2734]), acc : 0.6176000237464905, workerList : tensor([[1],
+        [2],
+        [3],
+        [5],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6033999919891357
+[tensor([16.3432]), tensor([-1.4657])]
+finish. welfare : tensor([36.3432]), acc : 0.6033999919891357, workerList : tensor([[3]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6330999732017517
+[tensor([16.3634]), tensor([5.9304]), tensor([0.9660]), tensor([0.8213]), tensor([-2.6136])]
+finish. welfare : tensor([44.0810]), acc : 0.6330999732017517, workerList : tensor([[2],
+        [4],
+        [5],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5788999795913696
+Graph constructed
+Graph(num_nodes=10, num_edges=72,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([42.3544]). workerList : tensor([[2],
+        [4]], device='cuda:0')
+------------
+[tensor([16.4929]), tensor([5.8614]), tensor([-4.1840])]
+finish. welfare : tensor([42.3544]), acc : 0.5788999795913696, workerList : tensor([[2],
+        [4]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6126000285148621
+[tensor([16.3432]), tensor([5.8626]), tensor([0.5700]), tensor([-3.3841])]
+finish. welfare : tensor([42.7757]), acc : 0.6126000285148621, workerList : tensor([[2],
+        [3],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6111000180244446
+[tensor([16.4929]), tensor([5.8614]), tensor([0.5781]), tensor([1.0302]), tensor([-1.6673])]
+finish. welfare : tensor([43.9627]), acc : 0.6111000180244446, workerList : tensor([[2],
+        [3],
+        [4],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6164000034332275
+[tensor([3.2686]), tensor([8.5935]), tensor([-0.6323])]
+finish. welfare : tensor([31.8621]), acc : 0.6164000034332275, workerList : tensor([[1],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6446999907493591
+[tensor([16.3432]), tensor([2.5836]), tensor([4.1776]), tensor([-2.7862])]
+finish. welfare : tensor([43.1044]), acc : 0.6446999907493591, workerList : tensor([[2],
+        [3],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6674000024795532
+[tensor([16.3634]), tensor([-1.2893])]
+finish. welfare : tensor([36.3634]), acc : 0.6674000024795532, workerList : tensor([[8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6665999889373779
+[tensor([22.9027]), tensor([-8.6087])]
+finish. welfare : tensor([42.9027]), acc : 0.6665999889373779, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6491000056266785
+[tensor([8.4457]), tensor([9.9177]), tensor([-2.3161])]
+finish. welfare : tensor([38.3634]), acc : 0.6491000056266785, workerList : tensor([[0],
+        [2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6086000204086304
+[tensor([22.9027]), tensor([-0.5483])]
+finish. welfare : tensor([42.9027]), acc : 0.6086000204086304, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5924000144004822
+[tensor([22.9027]), tensor([-1.1176])]
+finish. welfare : tensor([42.9027]), acc : 0.5924000144004822, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5526000261306763
+Graph constructed
+Graph(num_nodes=10, num_edges=72,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([39.1135]). workerList : tensor([[4],
+        [8]], device='cuda:0')
+------------
+[tensor([16.4929]), tensor([-5.3247])]
+finish. welfare : tensor([36.4929]), acc : 0.5526000261306763, workerList : tensor([[4]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6290000081062317
+[tensor([0.8389]), tensor([4.4284]), tensor([3.6589]), tensor([5.9951]), tensor([2.5793]), tensor([-0.9924])]
+finish. welfare : tensor([37.5006]), acc : 0.6290000081062317, workerList : tensor([[0],
+        [1],
+        [2],
+        [5],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.5684000253677368
+[tensor([16.4929]), tensor([-6.2204])]
+finish. welfare : tensor([36.4929]), acc : 0.5684000253677368, workerList : tensor([[4]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6000000238418579
+[tensor([22.9027]), tensor([-4.5393])]
+finish. welfare : tensor([42.9027]), acc : 0.6000000238418579, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6151999831199646
+[tensor([22.9027]), tensor([-8.6087])]
+finish. welfare : tensor([42.9027]), acc : 0.6151999831199646, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6617000102996826
+[tensor([0.8389]), tensor([4.4284]), tensor([6.2348]), tensor([3.6200]), tensor([2.5873]), tensor([-0.4689])]
+finish. welfare : tensor([37.7095]), acc : 0.6617000102996826, workerList : tensor([[1],
+        [3],
+        [5],
+        [8],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6617000102996826
+[tensor([-1.6314])]
+finish. welfare : 20, acc : 0.6617000102996826, workerList : tensor([], device='cuda:0', size=(0, 1), dtype=torch.int64)
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6496999859809875
+[tensor([22.9027]), tensor([-8.2527])]
+finish. welfare : tensor([42.9027]), acc : 0.6496999859809875, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6432999968528748
+[tensor([22.9027]), tensor([-9.3796])]
+finish. welfare : tensor([42.9027]), acc : 0.6432999968528748, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7088000178337097
+[tensor([8.4457]), tensor([6.6284]), tensor([2.9565]), tensor([-1.5045])]
+finish. welfare : tensor([38.0305]), acc : 0.7088000178337097, workerList : tensor([[0],
+        [5],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7013999819755554
+Graph constructed
+Graph(num_nodes=10, num_edges=74,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([41.7851]). workerList : tensor([[2],
+        [5]], device='cuda:0')
+------------
+[tensor([15.2915]), tensor([6.4936]), tensor([-4.2295])]
+finish. welfare : tensor([41.7851]), acc : 0.7013999819755554, workerList : tensor([[2],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7003999948501587
+[tensor([16.3634]), tensor([2.7502]), tensor([1.8385]), tensor([-2.2590])]
+finish. welfare : tensor([40.9521]), acc : 0.7003999948501587, workerList : tensor([[3],
+        [4],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6956999897956848
+[tensor([22.9027]), tensor([-7.5677])]
+finish. welfare : tensor([42.9027]), acc : 0.6956999897956848, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6843000054359436
+[tensor([0.8389]), tensor([4.4284]), tensor([5.9625]), tensor([3.9176]), tensor([4.0348]), tensor([-0.6895])]
+finish. welfare : tensor([39.1823]), acc : 0.6843000054359436, workerList : tensor([[1],
+        [2],
+        [4],
+        [5],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6477000117301941
+[tensor([0.8389]), tensor([10.0114]), tensor([4.3585]), tensor([4.6524]), tensor([-0.8318])]
+finish. welfare : tensor([39.8611]), acc : 0.6477000117301941, workerList : tensor([[2],
+        [3],
+        [5],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6793000102043152
+[tensor([3.2686]), tensor([2.4553]), tensor([1.3333]), tensor([4.7370]), tensor([3.1297]), tensor([3.5987]), tensor([0.5646]), tensor([1.4942]), tensor([1.3544]), tensor([-0.8478])]
+finish. welfare : tensor([41.9356]), acc : 0.6793000102043152, workerList : tensor([[0],
+        [1],
+        [2],
+        [3],
+        [4],
+        [5],
+        [6],
+        [8],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6840000152587891
+[tensor([15.2915]), tensor([6.4936]), tensor([-3.4368])]
+finish. welfare : tensor([41.7851]), acc : 0.6840000152587891, workerList : tensor([[2],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.704800009727478
+[tensor([16.3634]), tensor([2.7502]), tensor([1.6501]), tensor([-2.1511])]
+finish. welfare : tensor([40.7637]), acc : 0.704800009727478, workerList : tensor([[4],
+        [5],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7063000202178955
+[tensor([3.2686]), tensor([8.8187]), tensor([6.4289]), tensor([-1.7327])]
+finish. welfare : tensor([38.5162]), acc : 0.7063000202178955, workerList : tensor([[1],
+        [2],
+        [3]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7063000202178955
+[tensor([-1.6314])]
+finish. welfare : 20, acc : 0.7063000202178955, workerList : tensor([], device='cuda:0', size=(0, 1), dtype=torch.int64)
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.70169997215271
+Graph constructed
+Graph(num_nodes=10, num_edges=74,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([42.9027]). workerList : tensor([[2]], device='cuda:0')
+------------
+[tensor([22.9027]), tensor([-8.2527])]
+finish. welfare : tensor([42.9027]), acc : 0.70169997215271, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.70169997215271
+[tensor([-1.6314])]
+finish. welfare : 20, acc : 0.70169997215271, workerList : tensor([], device='cuda:0', size=(0, 1), dtype=torch.int64)
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7271000146865845
+[tensor([1.7552]), tensor([9.7683]), tensor([4.1646]), tensor([-0.3319])]
+finish. welfare : tensor([35.6881]), acc : 0.7271000146865845, workerList : tensor([[5],
+        [6],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7257000207901001
+[tensor([16.3432]), tensor([-5.4929])]
+finish. welfare : tensor([36.3432]), acc : 0.7257000207901001, workerList : tensor([[3]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7092000246047974
+[tensor([0.8389]), tensor([9.8351]), tensor([6.8816]), tensor([-2.0740])]
+finish. welfare : tensor([37.5556]), acc : 0.7092000246047974, workerList : tensor([[2],
+        [5],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7221999764442444
+[tensor([1.7552]), tensor([9.3298]), tensor([6.7373]), tensor([2.2605]), tensor([0.1202]), tensor([1.7005]), tensor([1.3969]), tensor([-1.2907])]
+finish. welfare : tensor([43.3004]), acc : 0.7221999764442444, workerList : tensor([[0],
+        [2],
+        [3],
+        [4],
+        [5],
+        [6],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.734499990940094
+[tensor([16.3634]), tensor([-6.1446])]
+finish. welfare : tensor([36.3634]), acc : 0.734499990940094, workerList : tensor([[8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7314000129699707
+[tensor([22.9027]), tensor([-1.1176])]
+finish. welfare : tensor([42.9027]), acc : 0.7314000129699707, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7034000158309937
+[tensor([16.4929]), tensor([-6.2204])]
+finish. welfare : tensor([36.4929]), acc : 0.7034000158309937, workerList : tensor([[4]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6969000101089478
+[tensor([22.9027]), tensor([-9.3796])]
+finish. welfare : tensor([42.9027]), acc : 0.6969000101089478, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.656499981880188
+Graph constructed
+Graph(num_nodes=10, num_edges=76,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([35.4001]). workerList : tensor([[5],
+        [8],
+        [9]], device='cuda:0')
+------------
+[tensor([0.8389]), tensor([10.2766]), tensor([-1.3658])]
+finish. welfare : tensor([31.1155]), acc : 0.656499981880188, workerList : tensor([[8],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6055999994277954
+[tensor([0.8389]), tensor([13.4551]), tensor([3.6106]), tensor([-2.1734])]
+finish. welfare : tensor([37.9046]), acc : 0.6055999994277954, workerList : tensor([[2],
+        [4],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6078000068664551
+[tensor([22.9027]), tensor([-7.5677])]
+finish. welfare : tensor([42.9027]), acc : 0.6078000068664551, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6121000051498413
+[tensor([22.9027]), tensor([-8.2527])]
+finish. welfare : tensor([42.9027]), acc : 0.6121000051498413, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6762999892234802
+[tensor([16.3634]), tensor([5.9304]), tensor([0.8106]), tensor([-3.4765])]
+finish. welfare : tensor([43.1044]), acc : 0.6762999892234802, workerList : tensor([[2],
+        [3],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6664000153541565
+[tensor([16.4929]), tensor([-4.1451])]
+finish. welfare : tensor([36.4929]), acc : 0.6664000153541565, workerList : tensor([[4]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6920999884605408
+[tensor([3.2686]), tensor([5.3214]), tensor([7.4572]), tensor([-1.6401])]
+finish. welfare : tensor([36.0472]), acc : 0.6920999884605408, workerList : tensor([[0],
+        [1],
+        [2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.691100001335144
+[tensor([22.9027]), tensor([-0.6969])]
+finish. welfare : tensor([42.9027]), acc : 0.691100001335144, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.691100001335144
+[tensor([-1.6314])]
+finish. welfare : 20, acc : 0.691100001335144, workerList : tensor([], device='cuda:0', size=(0, 1), dtype=torch.int64)
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6898999810218811
+[tensor([16.4929]), tensor([2.1203]), tensor([-2.8896])]
+finish. welfare : tensor([38.6132]), acc : 0.6898999810218811, workerList : tensor([[4],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.691100001335144
+Graph constructed
+Graph(num_nodes=10, num_edges=80,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([42.1388]). workerList : tensor([[0],
+        [2],
+        [3],
+        [4]], device='cuda:0')
+------------
+[tensor([8.4457]), tensor([6.4318]), tensor([5.5270]), tensor([1.7343]), tensor([-1.9255])]
+finish. welfare : tensor([42.1388]), acc : 0.691100001335144, workerList : tensor([[0],
+        [2],
+        [3],
+        [4]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7059999704360962
+[tensor([0.8389]), tensor([10.2766]), tensor([4.2846]), tensor([-0.7812])]
+finish. welfare : tensor([35.4001]), acc : 0.7059999704360962, workerList : tensor([[5],
+        [8],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7196000218391418
+[tensor([1.7552]), tensor([9.3298]), tensor([4.4212]), tensor([2.9553]), tensor([3.4551]), tensor([-1.6901])]
+finish. welfare : tensor([41.9166]), acc : 0.7196000218391418, workerList : tensor([[2],
+        [3],
+        [4],
+        [5],
+        [6]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7192000150680542
+[tensor([16.4929]), tensor([2.1203]), tensor([-3.1775])]
+finish. welfare : tensor([38.6132]), acc : 0.7192000150680542, workerList : tensor([[4],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7177000045776367
+[tensor([22.9027]), tensor([-4.5393])]
+finish. welfare : tensor([42.9027]), acc : 0.7177000045776367, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7193999886512756
+[tensor([0.8389]), tensor([4.4284]), tensor([6.0133]), tensor([3.9159]), tensor([2.5338]), tensor([3.2046]), tensor([1.5111]), tensor([-1.1657])]
+finish. welfare : tensor([42.4461]), acc : 0.7193999886512756, workerList : tensor([[1],
+        [2],
+        [3],
+        [4],
+        [5],
+        [8],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7196999788284302
+[tensor([16.3432]), tensor([-6.4405])]
+finish. welfare : tensor([36.3432]), acc : 0.7196999788284302, workerList : tensor([[3]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7261999845504761
+[tensor([16.3634]), tensor([-6.1446])]
+finish. welfare : tensor([36.3634]), acc : 0.7261999845504761, workerList : tensor([[8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7228000164031982
+[tensor([3.2686]), tensor([9.0274]), tensor([-0.7938])]
+finish. welfare : tensor([32.2960]), acc : 0.7228000164031982, workerList : tensor([[1],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7268000245094299
+[tensor([8.4457]), tensor([9.9177]), tensor([1.8600]), tensor([1.6466]), tensor([-2.2872])]
+finish. welfare : tensor([41.8700]), acc : 0.7268000245094299, workerList : tensor([[0],
+        [2],
+        [3],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7275999784469604
+Graph constructed
+Graph(num_nodes=10, num_edges=80,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([42.9027]). workerList : tensor([[2]], device='cuda:0')
+------------
+[tensor([22.9027]), tensor([-8.2527])]
+finish. welfare : tensor([42.9027]), acc : 0.7275999784469604, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7364000082015991
+[tensor([1.7552]), tensor([12.8948]), tensor([-2.3657])]
+finish. welfare : tensor([34.6500]), acc : 0.7364000082015991, workerList : tensor([[2],
+        [6]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7304999828338623
+[tensor([22.9027]), tensor([-7.5677])]
+finish. welfare : tensor([42.9027]), acc : 0.7304999828338623, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7267000079154968
+[tensor([22.9027]), tensor([-8.6087])]
+finish. welfare : tensor([42.9027]), acc : 0.7267000079154968, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7239000201225281
+[tensor([22.9027]), tensor([-0.6969])]
+finish. welfare : tensor([42.9027]), acc : 0.7239000201225281, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7239000201225281
+[tensor([-1.6314])]
+finish. welfare : 20, acc : 0.7239000201225281, workerList : tensor([], device='cuda:0', size=(0, 1), dtype=torch.int64)
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7271999716758728
+[tensor([3.2686]), tensor([12.0663]), tensor([3.0133]), tensor([-1.6338])]
+finish. welfare : tensor([38.3482]), acc : 0.7271999716758728, workerList : tensor([[1],
+        [2],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7163000106811523
+[tensor([16.4929]), tensor([-4.9170])]
+finish. welfare : tensor([36.4929]), acc : 0.7163000106811523, workerList : tensor([[4]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7095999717712402
+[tensor([16.4929]), tensor([5.8614]), tensor([-5.0155])]
+finish. welfare : tensor([42.3544]), acc : 0.7095999717712402, workerList : tensor([[2],
+        [4]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7084000110626221
+[tensor([0.8389]), tensor([9.8351]), tensor([6.8816]), tensor([2.4485]), tensor([0.1394]), tensor([1.7302]), tensor([-0.5678])]
+finish. welfare : tensor([41.8737]), acc : 0.7084000110626221, workerList : tensor([[0],
+        [2],
+        [4],
+        [5],
+        [8],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7077000141143799
+Graph constructed
+Graph(num_nodes=10, num_edges=76,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([42.9027]). workerList : tensor([[2]], device='cuda:0')
+------------
+[tensor([22.9027]), tensor([-0.6969])]
+finish. welfare : tensor([42.9027]), acc : 0.7077000141143799, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.707099974155426
+[tensor([22.9027]), tensor([-4.5393])]
+finish. welfare : tensor([42.9027]), acc : 0.707099974155426, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7067999839782715
+[tensor([0.8389]), tensor([4.4284]), tensor([8.2775]), tensor([3.2386]), tensor([2.4513]), tensor([0.4266]), tensor([1.5347]), tensor([-1.0430])]
+finish. welfare : tensor([41.1961]), acc : 0.7067999839782715, workerList : tensor([[0],
+        [1],
+        [2],
+        [3],
+        [4],
+        [5],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7084000110626221
+[tensor([8.4457]), tensor([0.1443]), tensor([7.4572]), tensor([-1.6401])]
+finish. welfare : tensor([36.0472]), acc : 0.7084000110626221, workerList : tensor([[0],
+        [1],
+        [2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7113000154495239
+[tensor([8.4457]), tensor([9.9177]), tensor([-2.3161])]
+finish. welfare : tensor([38.3634]), acc : 0.7113000154495239, workerList : tensor([[0],
+        [2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7153000235557556
+[tensor([15.2915]), tensor([6.4936]), tensor([-3.9628])]
+finish. welfare : tensor([41.7851]), acc : 0.7153000235557556, workerList : tensor([[2],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7143999934196472
+[tensor([22.9027]), tensor([-8.6087])]
+finish. welfare : tensor([42.9027]), acc : 0.7143999934196472, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7139000296592712
+[tensor([22.9027]), tensor([-9.3796])]
+finish. welfare : tensor([42.9027]), acc : 0.7139000296592712, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7268999814987183
+[tensor([16.3634]), tensor([-4.8399])]
+finish. welfare : tensor([36.3634]), acc : 0.7268999814987183, workerList : tensor([[8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7232000231742859
+[tensor([22.9027]), tensor([-9.3796])]
+finish. welfare : tensor([42.9027]), acc : 0.7232000231742859, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7113000154495239
+Graph constructed
+Graph(num_nodes=10, num_edges=82,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([36.4929]). workerList : tensor([[4]], device='cuda:0')
+------------
+[tensor([16.4929]), tensor([-1.3610])]
+finish. welfare : tensor([36.4929]), acc : 0.7113000154495239, workerList : tensor([[4]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7254999876022339
+[tensor([3.2686]), tensor([2.4553]), tensor([6.0819]), tensor([3.5504]), tensor([-0.4708])]
+finish. welfare : tensor([35.3562]), acc : 0.7254999876022339, workerList : tensor([[1],
+        [5],
+        [6],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7156999707221985
+[tensor([22.9027]), tensor([-1.1176])]
+finish. welfare : tensor([42.9027]), acc : 0.7156999707221985, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.717199981212616
+[tensor([16.4929]), tensor([5.8614]), tensor([0.5781]), tensor([-3.3600])]
+finish. welfare : tensor([42.9324]), acc : 0.717199981212616, workerList : tensor([[2],
+        [4],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.699999988079071
+[tensor([16.4929]), tensor([-1.3610])]
+finish. welfare : tensor([36.4929]), acc : 0.699999988079071, workerList : tensor([[4]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.713100016117096
+[tensor([1.7552]), tensor([12.8948]), tensor([3.3281]), tensor([2.1047]), tensor([1.8119]), tensor([0.0088]), tensor([-1.3699])]
+finish. welfare : tensor([41.9035]), acc : 0.713100016117096, workerList : tensor([[0],
+        [2],
+        [3],
+        [5],
+        [6],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7035999894142151
+[tensor([22.9027]), tensor([-4.5393])]
+finish. welfare : tensor([42.9027]), acc : 0.7035999894142151, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.6963000297546387
+[tensor([16.3432]), tensor([5.8626]), tensor([-3.6896])]
+finish. welfare : tensor([42.2058]), acc : 0.6963000297546387, workerList : tensor([[2],
+        [3]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.715399980545044
+[tensor([1.7552]), tensor([12.8948]), tensor([3.5204]), tensor([2.0779]), tensor([0.1117]), tensor([1.6812]), tensor([-0.5890])]
+finish. welfare : tensor([42.0411]), acc : 0.715399980545044, workerList : tensor([[0],
+        [2],
+        [4],
+        [5],
+        [6],
+        [8]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7224000096321106
+[tensor([1.7552]), tensor([9.8207]), tensor([6.5945]), tensor([2.0779]), tensor([-1.8756])]
+finish. welfare : tensor([40.2483]), acc : 0.7224000096321106, workerList : tensor([[2],
+        [4],
+        [5],
+        [6]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7330999970436096
+Graph constructed
+Graph(num_nodes=10, num_edges=78,
+      ndata_schemes={}
+      edata_schemes={})
+v_G.shape : torch.Size([10, 64])
+init_features shpe : torch.Size([10, 5])
+init_states shpe : torch.Size([10, 134])
+init_states shpe : torch.Size([10, 134])
+------------
+in test
+finish. welfare : tensor([35.1319]). workerList : tensor([[0],
+        [4]], device='cuda:0')
+------------
+[tensor([8.4457]), tensor([-1.3081])]
+finish. welfare : tensor([28.4457]), acc : 0.7330999970436096, workerList : tensor([[0]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7378000020980835
+[tensor([15.2915]), tensor([3.1304]), tensor([-3.8506])]
+finish. welfare : tensor([38.4219]), acc : 0.7378000020980835, workerList : tensor([[3],
+        [5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.723800003528595
+[tensor([22.9027]), tensor([-4.5393])]
+finish. welfare : tensor([42.9027]), acc : 0.723800003528595, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7192999720573425
+[tensor([0.8389]), tensor([13.4551]), tensor([3.6106]), tensor([2.3621]), tensor([1.6526]), tensor([-0.8270])]
+finish. welfare : tensor([41.9193]), acc : 0.7192999720573425, workerList : tensor([[2],
+        [3],
+        [4],
+        [8],
+        [9]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7332000136375427
+[tensor([15.2915]), tensor([-3.4293])]
+finish. welfare : tensor([35.2915]), acc : 0.7332000136375427, workerList : tensor([[5]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7098000049591064
+[tensor([22.9027]), tensor([-0.6969])]
+finish. welfare : tensor([42.9027]), acc : 0.7098000049591064, workerList : tensor([[2]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
+this episode, accuracy is 0.7124999761581421
+[tensor([1.7552]), tensor([12.8948]), tensor([-2.3657])]
+finish. welfare : tensor([34.6500]), acc : 0.7124999761581421, workerList : tensor([[2],
+        [6]], device='cuda:0')
+------------
+init_states shpe : torch.Size([10, 134])
